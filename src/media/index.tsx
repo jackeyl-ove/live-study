@@ -6,10 +6,12 @@ interface mediaProps {
 }
 
 const LoginMain: React.FC<mediaProps> = (props) => {
+  const user: number = Math.ceil(Math.random()*6)
+  const users = ['张三','Macel','May','张三丰','杰哥']
   return (
     <>
       <div className='Media-index-bgc'>
-        <Video user={props.user} />
+        <Video user={users[user]} />
       </div>
     </>
   )
