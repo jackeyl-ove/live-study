@@ -1,11 +1,13 @@
 export interface videoProps {
-  user: string
+  user: string;
+  serial: string;
+  liver: liveObjType
 }
 
 export interface BulletListType {
   value: string;
   time: string;
-  user: string
+  user: string;
 }
 
 export interface serverProps {
@@ -17,4 +19,10 @@ export interface bulletProps {
   msg: string;
   size: string;
   backgroundColor: string
+}
+
+export interface liveObjType {
+  name: string
+  img: string
+  remarks: string
 }

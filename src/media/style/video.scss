@@ -11,21 +11,79 @@ $mediaHeight: 75vh;
   .media-video {
     height: $mediaHeight;
     width: 60vw;
+    margin-right: 1vw;
+    .media-video-head {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      background-color: rgb(0, 174, 236);
+      .media-video-head-img {
+        height: 6vh;
+        width: 6vh;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-top: 5px;
+        margin-left: 10px;
+      }
+      .media-video-head-wordBox {
+        line-height: 5vh;
+        margin-left: 20px;
+        height: 70%;
+      }
+      .media-video-head-name {
+        font-size: 20px;
+        color: rgb(226, 226, 226);
+        font-weight: normal;
+      }
+      .media-video-head-word {
+        font-size: 15px;
+        color: rgb(226, 226, 226)
+      }
+      .media-video-head-remakes {
+        font-size: 8px;
+        height: 20%;
+        margin-left: 20px;
+        color: rgb(226, 226, 226)
+      }
+    }
+    .media-video-box {
+      height: 90%;
+      width: 100%;
+    }
+    .media-video-box {
+      object-fit: fill;
+    }
   }
 
   .media-comments {
     height: $mediaHeight;
     width: 20vw;
+    border-radius: 0px;
+
+    .media-comments-white {
+      height: 10%;
+      background-color: rgb(0, 174, 236);
+    }
 
     .media-comments-dashboard {
-      height: 90%;
+      height: 70%;
       background-color: rgb(226, 226, 226);
-      border-top-right-radius: 5px;
       overflow: auto;
+      border-radius: 0px;
 
-      .item-value {
-        color: black;
-        font-size: 16px;
+      .media-comments-dashboard-item {
+        border: 0;
+        padding-left: 10px;
+        height: 3vh;
+        .item-name {
+          color: rgb(148, 153, 160);
+          font-size: 13px;
+        }
+        .item-value {
+          padding-left: 5px;
+          color: rgb(79, 81, 83);
+          font-size: 13px;
+        }
       }
 
       .item-time {
@@ -35,21 +93,21 @@ $mediaHeight: 75vh;
     }
 
     .media-comments-bullet {
-      height: 10%;
-      display: flex;
-      background-color: rgb(226, 226, 226);
-      border-bottom-right-radius: 5px;
+      height: 20%;
+      background-color: rgb(0, 174, 236);
+      padding-top: 3vh;
 
       .media-comments-bullet-input {
         box-sizing: border-box;
         background-color: #eeeeee;
-        display: inline-block;
-        height: 100%;
-        width: 15vw;
+        display: block;
+        // height: 60%;
+        width: 17vw;
         padding: 5px;
         border: 0;
-        border-radius: 5px;
-        font-size: 16px;
+        margin: auto;
+        font-size: 13px;
+        clear: both;
 
         &:focus {
           outline: none;
@@ -57,19 +115,20 @@ $mediaHeight: 75vh;
       }
 
       .media-comments-bullet-button {
+        display: block;
         box-sizing: border-box;
-        height: 100%;
-        width: 5vw;
-        background-color: rgb(0, 174, 236);
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        width: 3vw;
+        background-color: rgb(255, 114, 163);
         border: 0;
         text-align: center;
+        padding: 0;
+        margin-top: 3px;
+        margin-left: 15vw;
 
         .media-comments-bullet-button-word {
           height: 60%;
           width: 70%;
-          font-size: 1em;
+          font-size: 1vh;
           color: #eeeeee;
           background-color: transparent;
           position: relative;
@@ -83,10 +142,18 @@ $mediaHeight: 75vh;
 
 .media-screen {
   position: absolute;
-  left: 10%;
   top: 10%;
-  height: calc($mediaHeight - 10vw);
-  width: 60vw;
+  height: 80%;
+  width: 57vw;
   background-color: transparent;
   overflow: hidden;
+}
+
+//进度条
+video::-webkit-media-controls-timeline {
+  display: none;
+}
+
+.ant-empty {
+  display: none;
 }
